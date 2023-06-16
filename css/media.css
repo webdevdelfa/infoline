@@ -1,22 +1,33 @@
+/* До 1180px размер шрифта заголовка будет зависеть от ширина  */
 @media (max-width: 1180px) {
     .title {
         font-size: 4.75vw;
     }
 }
 
+/* Начинаем перестраивать страницу в этой точке (тут она начинает ломаться) */
 @media (max-width: 960px) {
+
+    /* Бургрег был изначально спрятан */
     .burger {
         display: block;
     }
 
+    /* Прячем меню в хедере */
     .header__menu {
         display: none;
     }
 
+    /* Прячем телефон в хедере */
     .header__tel {
         display: none;
     }
 
+    /* Мобильное меню появляется когда к блоку header__nav добавляется класс menu__mobile.
+        <nav class="nav header__nav menu__mobile">
+            <ul class="nav__list header__menu"></ul>  
+        </nav>           
+    */
     .menu-mobile .header__menu {
         display: flex;
     }
@@ -26,6 +37,7 @@
         font-size: 1rem;
     }
 
+    /* Размеры карточки с услугой */
     .service {
         width: calc((100% - 20px) / 2);
         min-height: 172px;
@@ -37,6 +49,7 @@
         --container-width: 93.1%;
     }
 
+    /* Высчитываем в процентах размер ширину контейнера и убираем паддинги */
     .container {
         width: var(--container-width);
         padding-right: 0;
@@ -54,15 +67,11 @@
         padding-top: 46px;
     }
 
-    .hero__container {
-        /* Убрать отступ справа, чтобы картинку расположить как на макете */
-        padding-right: 0;
-    }
-
     .title {
         font-size: 31px;
     }
 
+    /* Отодвигаем картинку как в макете (от центра блока с картинкой на 30px) */
     .hero__img {
         transform: translateX(calc(-50% + 30px));
     }
@@ -82,40 +91,40 @@
         padding-bottom: 70px;
     }
 
+    /* Прячем блок с кнопками (секция Аренда) */
     .rent__btns-list {
         display: none;
     }
 
+    /* Отображаем селект */
     .rent__select-wrap {
         display: inline-block;
     }
 
-    .offers-slider__container {
-        padding-right: 0px;
-        padding-left: 0px;
-        width: calc(93.1% + 20px);
-    }
-
+    /* Ширина блока */
     .offer {
         width: 307px;
     }
 
+    /* Прозрачный фон у секции с услугами */
     .services {
         background-color: transparent;
     }
 
+    /* Спрятать логотип у секции с услугами */
     .services__logo {
         display: none;
     }
 
+    /* Меняем отображение на блочное, так как элементы перестраиваются и идут друг под другом */
     .service {
         display: block;
         min-height: 251px;
     }
 
-    .service__icon {
+    /* Картинка изначально расположена по центру. Меняем положение картинки и фон под ней */
+    .service__img {
         width: auto;
-        display: flex;
         justify-content: flex-start;
         background-color: transparent;
         padding: 30px 20px 0;
@@ -125,15 +134,18 @@
         padding: 20px 20px 30px 20px;
     }
 
+    /* Меняем размер кнопок слайдера */
     .control_type_disc {
         width: 35px;
         height: 35px;
     }
 
+    /* Прячем труеугольные стрелки которые находятся в хедере */
     .control_type_triangle {
         display: none;
     }
 
+    /* Стрелки прижымаются к краям контейнера */
     .gallery__slider-control-prev {
         left: 0px;
     }
@@ -142,40 +154,49 @@
         right: 0px;
     }
 
+    /* В Фотогалереи появляется отступ слева. Высчитываем его при помощи функции calc */
     .gallery__list {
         column-gap: 14px;
+        /* Вычитаем из ширины вьюпорта ширину контейнера и делим получившееся значение на 2 */
         padding-left: calc((100vw - var(--container-width))/2);
     }
 
+    /* Элементу галереи (Блок с картинкой) устанавливаем размеры по макету и запрещаем увеличиваться и ужиматься */
     .gallery__item {
         flex: 0 0 432px;
         height: 285px;
     }
 
+    /* Меняем размеры буллетов */
     .slider-pagination__bullet {
         flex: 0 1 82px;
     }
 
+    /* Для секции "Контакты" задаем двухцветный фон с помощью линейного градиента */
     .contacts {
-        padding: 120px 0px;
+        padding: 90px 0px;
         background: linear-gradient(180deg, #2C3B45 0, #2C3B45 71.7%, #1E92E7 71.7%);
         position: relative;
     }
 
+    /* Меняем направление оси для контейнера секции контакты */
     .contacts__container {
         flex-direction: column;
     }
 
+    /* Растягиваем блок с картой на всю ширину */
     .contacts__map {
         width: 100%;
     }
 
+    /* Меняем направление оси кнтейнера футера */
     .footer__container {
         flex-direction: column;
         text-align: center;
         row-gap: 40px;
     }
 
+    /* Убираем паддинги для навигационного списка */
     .footer .nav__list {
         flex-direction: column;
         row-gap: 20px;
@@ -194,9 +215,6 @@
     }
 
     .hero {
-        /* height: 758px; */
-        max-height: none;
-        height: auto;
         padding-top: 115px;
     }
 
@@ -222,6 +240,7 @@
         justify-content: center;
     }
 
+    /* На мобильнике у нас две кнопки в hero */
     .hero__btns {
         gap: 15px 10px;
         justify-content: center;
@@ -233,10 +252,12 @@
         color: #FFFFFF;
     }
 
+    /* Отобразить вторую кнопку */
     .hero__btn:nth-child(2) {
         display: inline-block;
     }
 
+    /* Блок с фото занимаем всю ширину вьюпорта */
     .hero__img-wrap {
         width: 100vw;
         border-radius: 0;
@@ -276,8 +297,7 @@
         width: 100%;
     }
 
-    .service__icon {
-        width: auto;
+    .service__img {
         display: flex;
         justify-content: center;
         background-color: #2C3B45;
@@ -286,6 +306,11 @@
 
     .service__content {
         padding: 20px 20px 30px 20px;
+    }
+
+    .gallery__item {
+        flex: 0 0 306px;
+        height: 202px;
     }
 
 }

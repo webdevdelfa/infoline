@@ -47,7 +47,7 @@
     width: 15px;
     height: 10px;
     display: block;
-    background: url(../img/rent/arrow_select.svg) no-repeat center/contain;
+    background: url(../../img/rent/arrow_select.svg) no-repeat center/contain;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

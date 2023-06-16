@@ -47,7 +47,7 @@
 
 
 /* Иконка услуги (слева) */
-.service__icon {
+.service__img {
     width: 70px;
     display: flex;
     align-items: center;
