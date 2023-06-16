@@ -1,0 +1,236 @@
+/* header */
+
+.header {
+    position: absolute;
+    width: 100%;
+}
+
+/* Изменение контейнера для шапки */
+.header__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+    padding-top: 29px;
+}
+
+/* Логотип */
+.logo {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Картинка логотипа */
+.logo__img {
+    object-fit: contain;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+/* Текст логотипа */
+.logo__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+/* Навигация */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+}
+
+/* Спрятать белую кртинку если она не находится внутри мобильного меню */
+.header__nav:not(.menu-mobile) .logo__img--white {
+    display: none;
+}
+
+/* Спрятать голубую картинку внутри мобильного меню */
+.menu-mobile .logo__img--blue {
+    display: none;
+}
+
+/* Прозрачный логотип внутри мобильного меню */
+.menu-mobile .logo {
+    opacity: 0.2;
+}
+
+/* Спрятать телефон который находится мобильного меню */
+.menu-mobile__tel {
+    display: none;
+}
+
+/* Стили телефона в мобильном меню */
+.menu-mobile .menu-mobile__tel {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+/* Мобильное меню */
+.header__nav.menu-mobile {
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #1E92E7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16px 16px 50px;
+    text-align: center;
+}
+
+/* Список навигации */
+.nav__list {
+    display: flex;
+    column-gap: 30px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+    background: #404F59;
+    border-radius: 0px 0px 10px 10px;
+    padding: 20px 40px;
+}
+
+.header .nav__list {
+    margin-top: -29px;
+}
+
+/* Список элементов меню на мобильном устройстве */
+.menu-mobile .nav__list {
+    background: none;
+    margin-top: 54px;
+    padding: 0;
+    flex-direction: column;
+    row-gap: 30px;
+    align-self: center;
+    flex: 1;
+}
+
+/* Анимация на ссылке */
+.nav__link {
+    transition: all 0.3s;
+}
+
+/* Смена цвета ссылки при наведении */
+.nav__link:hover {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Стилизация телефона внутри header */
+.tel {
+    display: flex;
+    align-items: center;
+}
+
+.tel span {
+    color: #FFFFFF;
+}
+
+.tel__icon {
+    margin-right: 10px;
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
+}
+
+.tel__link {
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    white-space: nowrap;
+}
+
+/* end Стилизация телефона внутри header */
+
+/************* БУРГЕР ************/
+
+/* Бургер меню */
+.burger {
+    display: none;
+    padding: 0;
+    width: 26px;
+    height: 20px;
+    z-index: 10;
+    position: relative;
+}
+
+/* Бургер меню внутри полноэкранного меню */
+.menu-mobile .burger {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+}
+
+/* Элемент бургер меню */
+.burger__el {
+    display: block;
+    background: #FFFFFF;
+    border-radius: 1px;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+}
+
+/* Прижать верхний элемент бургера к верхнему краю */
+.burger__el:nth-child(1) {
+    top: 0;
+}
+
+/* Расположить средний элемент по центру */
+.burger__el:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Прижать нижний элемент бургера к нижнему краю */
+.burger__el:nth-child(3) {
+    bottom: 0;
+}
+
+
+/* Стили элементов бургера внутри мобильного меню */
+
+/* Спрятать средний элемент */
+.menu-mobile .burger__el:nth-child(2) {
+    display: none;
+}
+
+/* Повернуть верхний элемент на 45 градусов */
+.menu-mobile .burger__el:nth-child(1) {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+/* Повернуть нижний элемент на -45 градусов */
+.menu-mobile .burger__el:nth-child(3) {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+/************* БУРГЕР (конец) ************/

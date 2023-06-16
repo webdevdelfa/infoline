@@ -1,0 +1,111 @@
+/* Контакты */
+.contacts {
+    padding: 120px 0px;
+    background: linear-gradient(90deg, #2C3B45 0, #2C3B45 54vw, #1E92E7 54vw);
+    position: relative;
+}
+
+.contact__decor {
+    position: absolute;
+    width: 54vw;
+    top: 0;
+    bottom: 0;
+    background: url(../img/contacts/decor.svg) no-repeat bottom right / cover;
+}
+
+.contacts__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.contacts__content {
+    flex: 1 0 auto;
+}
+
+.section-title {}
+
+.contacts__title {
+    color: #FFFFFF;
+    margin-bottom: 51px;
+}
+
+.contacts__info {
+    margin-bottom: 84px;
+}
+
+.contacts-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.contacts-item {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.contacts-item__icon {
+    width: 30px;
+    height: 30px;
+}
+
+.contacts-item__link {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.work-hours {}
+
+.work-hours__desc {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.work-hours__info {
+    background: #404F59;
+    border-radius: 5px;
+    min-height: 50px;
+    padding: 5px 5px 5px 15px;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.work-hours__day {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 20px;
+    color: #1E92E7;
+}
+
+.work-hours__time {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #2C3B45;
+    border-radius: 5px;
+    display: block;
+    padding: 6px 20px;
+}
+
+.contacts__map {
+    /* 623/1180 = 52.8 */
+    flex: 0 1 52.8%;
+}
+
+.contacts__map-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

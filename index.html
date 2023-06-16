@@ -18,7 +18,7 @@
 
 <body>
     <div class="wrapper">
-        <!-- Шапка -->
+        <!---------- Шапка --------->
         <header class="header">
             <div class="container header__container">
                 <!-- Навигация (логотип, меню, телефон) -->
@@ -67,7 +67,8 @@
                 </nav>
             </div>
         </header>
-        <!-- Hero -->
+
+        <!---------- Hero ---------->
         <section class="hero">
             <div class="container hero__container">
                 <div class="hero__content">
@@ -79,13 +80,14 @@
                     <!-- end Адрес -->
                     <!-- Заголовок -->
                     <h1 class="title hero__title">
-                        Бизнес-центр
+                        Бизнес-центр <br>
                         в тюмени
                     </h1>
                     <!-- end Заголовок -->
-                    <!-- Кнопка -->
-                    <button class="btn btn_theme_blue hero__btn">Заказать звонок</button>
-                    <!-- end Кнопка -->
+                    <div class="hero__btns">
+                        <button class="btn btn_theme_blue hero__btn btn_size_big">Заказать звонок</button>
+                        <button class="btn hero__btn btn_theme_transparent btn_size_small">аренда площади</button>
+                    </div>
                 </div>
                 <!-- Деоративное изображение (здание) -->
                 <div class="hero__img-wrap">
@@ -95,50 +97,57 @@
                 <!-- end Деоративное изображение (здание) -->
             </div>
         </section>
-        <!-- Аренда -->
+
+        <!-------- Аренда ---------->
         <section class="rent section">
             <div class="container">
                 <!-- Заголовок секций -->
                 <h2 class="section-title rent__title">аренда</h2>
-                <!-- end Заголовок секций -->
                 <!-- Кнопки -->
                 <div class="rent__btns">
-                    <!-- Список кнопок -->
+
+                    <!-- Список кнопок (начало) -->
                     <ul class="rent__btns-list">
                         <!-- Элемент списка -->
                         <li class="rent__btns-item">
                             <!-- Кнопка -->
-                            <button class="btn btn_theme_transparent active rent__btn">
+                            <button class="btn btn_theme_transparent active rent__btn btn_size_small">
                                 Офисы (7)
                             </button>
                         </li>
                         <li class="rent__btns-item">
-                            <button class="btn btn_theme_transparent rent__btn">
+                            <button class="btn btn_theme_transparent rent__btn btn_size_small">
                                 конференс-залы (2)
                             </button>
                         </li>
                         <li class="rent__btns-item">
-                            <button class="btn btn_theme_transparent rent__btn">
+                            <button class="btn btn_theme_transparent rent__btn btn_size_small">
                                 Торговые (0)
                             </button>
                         </li>
                     </ul>
-                    <!-- end Список кнопок -->
+                    <!-- Список кнопок (конец) -->
+
+                    <!-- Селект (появляется на мобильной версии) -->
                     <div class="rent__select-wrap">
-                        <select name="plaza" id="" class="rent__select">
+                        <select name="plaza" id="plaza" class="rent__select">
                             <option value="" disabled selected>вид площади</option>
                             <option value="offices">Офисы (7)</option>
                             <option value="conference">конференс-залы (2)</option>
                             <option value="commercial">Торговые (0)</option>
                         </select>
                     </div>
+                    <!-- (конец) Селект (появляется на мобильной версии) -->
                 </div>
             </div>
             <!-- Слайдер с предложениями -->
             <div class="offers-slider">
                 <div class="container offers-slider__container">
                     <!-- Кнопка переключения слайдера (назад) -->
-                    <button class="control control_prev offers__control-prev">назад</button>
+                    <button
+                        class="control control_prev offers__control offers__control-prev control_type_triangle">назад</button>
+                    <button
+                        class="control control_prev offers__control offers__control-prev control_type_disc">назад</button>
                     <!-- Список предложений -->
                     <ul class="offers-list">
                         <!-- Предложение -->
@@ -165,7 +174,7 @@
                                         </li>
                                     </ul>
                                     <!-- Кнопка -->
-                                    <button class="btn btn_theme_blue offer__btn">запросить цену</button>
+                                    <button class="btn btn_theme_blue offer__btn btn_size_big">запросить цену</button>
                                 </div>
                             </div>
                         </li>
@@ -189,7 +198,7 @@
                                             <span class="offer__info-value offer__info-value_true">Есть</span>
                                         </li>
                                     </ul>
-                                    <button class="btn btn_theme_blue offer__btn">запросить цену</button>
+                                    <button class="btn btn_theme_blue offer__btn btn_size_big">запросить цену</button>
                                 </div>
                             </div>
                         </li>
@@ -213,13 +222,16 @@
                                             <span class="offer__info-value offer__info-value_true">Есть</span>
                                         </li>
                                     </ul>
-                                    <button class="btn btn_theme_blue offer__btn">запросить цену</button>
+                                    <button class="btn btn_theme_blue offer__btn btn_size_big">запросить цену</button>
                                 </div>
                             </div>
                         </li>
                     </ul>
                     <!-- Кнопка переключения слайдера (вперед) -->
-                    <button class="control control_next offers__control-next">вперед</button>
+                    <button
+                        class="control control_next offers__control offers__control-next control_type_triangle">вперед</button>
+                    <button
+                        class="control control_next offers__control offers__control-next control_type_disc">вперед</button>
                     <!-- Буллеты для слайдера -->
                     <div class="slider-pagination offers-slider__pagination">
                         <!-- Список буллетов -->
@@ -248,9 +260,11 @@
                 </div>
             </div>
         </section>
-        <!-- Услуги -->
+
+        <!---------- Услуги -------->
         <section class="services section">
             <div class="container">
+                <!-- Шапка секции (заголовок и логотип) -->
                 <div class="services__header">
                     <h2 class="section-title services__title">Услуги компании</h2>
                     <div class="logo services__logo">
@@ -262,11 +276,15 @@
                 <ul class="services__list">
                     <!-- Услуга -->
                     <li class="service">
+                        <!-- Картинка -->
                         <div class="service__icon">
                             <img src="img/icons/wifi.svg" alt="wifi">
                         </div>
+                        <!-- Блок с описанием -->
                         <div class="service__content">
+                            <!-- Заголовок блока -->
                             <h3 class="service__title">Обслуживание офисной техники и интернет</h3>
+                            <!-- Список преимуществ -->
                             <ul class="service__list">
                                 <li class="service__item">Локальные сети и интернет</li>
                                 <li class="service__item">Контроль доступа</li>
@@ -342,7 +360,8 @@
                 </ul>
             </div>
         </section>
-        <!-- Фото галерея -->
+
+        <!------ Фото галерея ------>
         <section class="gallery section">
             <div class="container">
                 <h2 class="section-title gallery__title">
@@ -379,32 +398,35 @@
                 </ul>
             </div>
             <!-- Буллеты -->
-            <div class="gallery__pagination">
-                <div class="slider-pagination offers-slider__pagination">
-                    <ul class="slider-pagination__bullets gallery-slider__pagination-bullets">
-                        <li class="slider-pagination__bullet gallery-slider__pagination-bullet">
-                            <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
-                        </li>
-                        <li class="slider-pagination__bullet gallery-slider__pagination-bullet">
-                            <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
-                        </li>
-                        <li class="slider-pagination__bullet gallery-slider__pagination-bullet active">
-                            <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
-                        </li>
-                        <li class="slider-pagination__bullet gallery-slider__pagination-bullet">
-                            <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
-                        </li>
-                        <li class="slider-pagination__bullet gallery-slider__pagination-bullet">
-                            <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
-                        </li>
-                        <li class="slider-pagination__bullet gallery-slider__pagination-bullet">
-                            <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
-                        </li>
-                    </ul>
+            <div class="container">
+                <div class="gallery__pagination">
+                    <div class="slider-pagination offers-slider__pagination">
+                        <ul class="slider-pagination__bullets gallery-slider__pagination-bullets">
+                            <li class="slider-pagination__bullet gallery-slider__pagination-bullet">
+                                <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
+                            </li>
+                            <li class="slider-pagination__bullet gallery-slider__pagination-bullet">
+                                <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
+                            </li>
+                            <li class="slider-pagination__bullet gallery-slider__pagination-bullet active">
+                                <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
+                            </li>
+                            <li class="slider-pagination__bullet gallery-slider__pagination-bullet">
+                                <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
+                            </li>
+                            <li class="slider-pagination__bullet gallery-slider__pagination-bullet">
+                                <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
+                            </li>
+                            <li class="slider-pagination__bullet gallery-slider__pagination-bullet">
+                                <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- Контакты -->
+
+        <!-------- Контакты -------->
         <section class="contacts section">
             <div class="contact__decor">
             </div>
@@ -436,11 +458,12 @@
                     </div>
                 </div>
                 <div class="contacts__map">
-                    <img src="./img/contacts/map.jpg" alt="Карта">
+                    <img class="contacts__map-img" src="./img/contacts/map.jpg" alt="Карта">
                 </div>
             </div>
         </section>
-        <!-- Подвал -->
+
+        <!---------- Подвал -------->
         <footer class="footer">
             <div class="container footer__container">
                 <a href="" class="logo">
