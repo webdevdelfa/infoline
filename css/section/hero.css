@@ -73,50 +73,6 @@
     margin-bottom: 7.7%;
 }
 
-.btn {
-    border: none;
-    border-radius: 5px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1;
-    text-align: center;
-    text-transform: uppercase;
-    display: inline-block;
-    transition: all 0.3s;
-}
-
-.btn_theme_transparent {
-    background-color: transparent;
-    border: 1px solid #1E92E7;
-    color: #000000;
-}
-
-.btn_theme_blue {
-    /* Внутренний отступ по меньшей кнопке (примерный отступ) */
-    background: #1E92E7;
-    color: #FFFFFF;
-}
-
-.btn_size_big {
-    padding: 14px 20px;
-}
-
-.btn_size_small {
-    padding: 9px 20px;
-}
-
-.btn.active {
-    background: #1E92E7;
-    color: #FFFFFF;
-}
-
-.btn:hover {
-    background-color: #187fc9;
-    color: #FFFFFF;
-}
-
 .hero__btns {
     display: flex;
     flex-wrap: wrap;
@@ -140,7 +96,7 @@
     /* Скругление углов */
     border-radius: 5px 0px 0px 0px;
 
-    /* Разрешаем блоку занимать все свободное пространство */
+    /* Запретить блоку ужиматься */
     flex-grow: 1;
 }
 

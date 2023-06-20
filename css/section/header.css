@@ -3,16 +3,13 @@
 .header {
     position: absolute;
     width: 100%;
+    z-index: 100;
 }
 
 /* Изменение контейнера для шапки */
 .header__container {
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     position: relative;
-    z-index: 100;
     padding-top: 29px;
 }
 
@@ -50,27 +47,27 @@
 }
 
 /* Спрятать белую кртинку если она не находится внутри мобильного меню */
-.header__nav:not(.menu-mobile) .logo__img--white {
+.header__nav:not(.nav-mobile) .logo__img--white {
     display: none;
 }
 
 /* Спрятать голубую картинку внутри мобильного меню */
-.menu-mobile .logo__img--blue {
+.nav-mobile .logo__img--blue {
     display: none;
 }
 
 /* Прозрачный логотип внутри мобильного меню */
-.menu-mobile .logo {
+.nav-mobile .logo {
     opacity: 0.2;
 }
 
 /* Спрятать телефон который находится мобильного меню */
-.menu-mobile__tel {
+.nav-mobile__phone {
     display: none;
 }
 
 /* Стили телефона в мобильном меню */
-.menu-mobile .menu-mobile__tel {
+.nav-mobile .nav-mobile__phone {
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 24px;
@@ -80,7 +77,7 @@
 }
 
 /* Мобильное меню */
-.header__nav.menu-mobile {
+.header__nav.nav-mobile {
     flex-direction: column;
     justify-content: flex-start;
     background: #1E92E7;
@@ -103,17 +100,17 @@
     font-size: 16px;
     line-height: 140%;
     color: #FFFFFF;
-    background: #404F59;
-    border-radius: 0px 0px 10px 10px;
-    padding: 20px 40px;
 }
 
 .header .nav__list {
+    background: #404F59;
+    border-radius: 0px 0px 10px 10px;
+    padding: 20px 40px;
     margin-top: -29px;
 }
 
 /* Список элементов меню на мобильном устройстве */
-.menu-mobile .nav__list {
+.nav-mobile .nav__list {
     background: none;
     margin-top: 54px;
     padding: 0;
@@ -134,23 +131,23 @@
 }
 
 /* Стилизация телефона внутри header */
-.tel {
+.phone {
     display: flex;
     align-items: center;
 }
 
-.tel span {
+.phone span {
     color: #FFFFFF;
 }
 
-.tel__icon {
+.phone__icon {
     margin-right: 10px;
     height: 24px;
     width: 24px;
     object-fit: contain;
 }
 
-.tel__link {
+.phone__link {
     text-decoration: none;
     font-family: 'Montserrat';
     font-style: normal;
@@ -177,7 +174,7 @@
 }
 
 /* Бургер меню внутри полноэкранного меню */
-.menu-mobile .burger {
+.nav-mobile .burger {
     position: fixed;
     top: 16px;
     right: 16px;
@@ -214,19 +211,19 @@
 /* Стили элементов бургера внутри мобильного меню */
 
 /* Спрятать средний элемент */
-.menu-mobile .burger__el:nth-child(2) {
+.nav-mobile .burger__el:nth-child(2) {
     display: none;
 }
 
 /* Повернуть верхний элемент на 45 градусов */
-.menu-mobile .burger__el:nth-child(1) {
+.nav-mobile .burger__el:nth-child(1) {
     left: 50%;
     top: 50%;
     transform: translateX(-50%) rotate(45deg);
 }
 
 /* Повернуть нижний элемент на -45 градусов */
-.menu-mobile .burger__el:nth-child(3) {
+.nav-mobile .burger__el:nth-child(3) {
     left: 50%;
     top: 50%;
     transform: translateX(-50%) rotate(-45deg);

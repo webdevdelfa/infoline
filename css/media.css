@@ -6,7 +6,7 @@
 }
 
 /* Начинаем перестраивать страницу в этой точке (тут она начинает ломаться) */
-@media (max-width: 960px) {
+@media (max-width: 860px) {
 
     /* Бургрег был изначально спрятан */
     .burger {
@@ -19,7 +19,7 @@
     }
 
     /* Прячем телефон в хедере */
-    .header__tel {
+    .header__phone {
         display: none;
     }
 
@@ -28,19 +28,22 @@
             <ul class="nav__list header__menu"></ul>  
         </nav>           
     */
-    .menu-mobile .header__menu {
+    .nav-mobile .header__menu {
         display: flex;
     }
 
     /* Размер шрифта мобильного меню */
-    .menu-mobile .nav__list {
+    .nav-mobile .nav__list {
         font-size: 1rem;
+    }
+
+    .nav-mobile .nav-mobile__phone {
+        display: block;
     }
 
     /* Размеры карточки с услугой */
     .service {
         width: calc((100% - 20px) / 2);
-        min-height: 172px;
     }
 }
 
@@ -56,14 +59,24 @@
         padding-left: 0;
     }
 
+    .header {
+        background: #404F59;
+        border-radius: 0px 0px 10px 10px;
+        padding: 16px 0px;
+    }
+
+    .header__container {
+        padding-top: 0px;
+    }
+
     .hero {
         padding-top: 90px;
         border-bottom-width: 30px;
     }
 
     .hero__content {
-        /* 322/580 = 55.5% */
-        flex-basis: 55.5%;
+        /* 306/540 = 55.5% */
+        flex-basis: 56.7%;
         padding-top: 46px;
     }
 
@@ -73,7 +86,8 @@
 
     /* Отодвигаем картинку как в макете (от центра блока с картинкой на 30px) */
     .hero__img {
-        transform: translateX(calc(-50% + 30px));
+        left: 0;
+        transform: translateX(30px);
     }
 
     .section-title {
@@ -101,9 +115,28 @@
         display: inline-block;
     }
 
+    .control_next {
+        right: 0px;
+    }
+
+    .control_prev {
+        left: 0px;
+    }
+
+    .offers-slider__container {}
+
+    /* У карточек предложений убрать отступ справа */
+    .offers-list {
+        margin-right: calc((100vw - 100%) / -2);
+    }
+
     /* Ширина блока */
     .offer {
         width: 307px;
+    }
+
+    .offer__info {
+        padding: 33px 30px 30px;
     }
 
     /* Прозрачный фон у секции с услугами */
@@ -145,7 +178,13 @@
         display: none;
     }
 
-    /* Стрелки прижымаются к краям контейнера */
+    .gallery__slider-controls {
+        /*  50% - половина высоты кнопки */
+        top: calc(50% - 35px / 2);
+    }
+
+
+    /* Стрелки прижимаются к краям контейнера */
     .gallery__slider-control-prev {
         left: 0px;
     }
@@ -174,9 +213,16 @@
 
     /* Для секции "Контакты" задаем двухцветный фон с помощью линейного градиента */
     .contacts {
+        --contacts-left-col: 71.7%;
         padding: 90px 0px;
-        background: linear-gradient(180deg, #2C3B45 0, #2C3B45 71.7%, #1E92E7 71.7%);
+        background: linear-gradient(180deg, #2C3B45 0, #2C3B45 var(--contacts-left-col), #1E92E7 var(--contacts-left-col));
         position: relative;
+    }
+
+    .contacts::before {
+        width: 100vw;
+        height: var(--contacts-left-col);
+        background: url(../../img/contacts/decor.svg) no-repeat bottom right / cover;
     }
 
     /* Меняем направление оси для контейнера секции контакты */
@@ -270,6 +316,7 @@
 
     .hero__img {
         height: 100%;
+        left: 50%;
         transform: translateX(-50%);
     }
 
@@ -279,15 +326,19 @@
         height: 85%;
     }
 
+    .control_prev {
+        display: none;
+    }
+
     .offers-slider__container {
         width: calc(91.5% + 20px);
     }
 
-    .offers__control.control_type_triangle {
+    .control_type_triangle {
         display: none;
     }
 
-    .offers__control.control_type_disc {
+    .offers__control-next+.control_type_disc {
         display: flex;
     }
 
@@ -305,7 +356,7 @@
     }
 
     .service__content {
-        padding: 20px 20px 30px 20px;
+        padding: 20px 20px 30px;
     }
 
     .gallery__item {

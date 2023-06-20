@@ -50,13 +50,13 @@
                     </ul>
                     <!-- end список ссылок -->
                     <!-- телефон -->
-                    <div class="tel header__tel">
+                    <div class="phone header__phone">
                         <img src="./img/icons/tel.svg" alt="tel" class="tel__icon">
-                        <a href="tel:+73452388000" class="tel__link"> 8 (3452) <span>388-000</span></a>
+                        <a href="tel:+73452388000" class="phone__link"> 8 (3452) <span>388-000</span></a>
                     </div>
                     <!-- end телефон -->
                     <!-- Телефон для мобильного меню -->
-                    <a class="menu-mobile__tel" href="tel:+73452388-000">+7 (3452) 388-000</a>
+                    <a class="nav-mobile__phone" href="tel:+73452388-000">+7 (3452) 388-000</a>
                     <!-- Бургер -->
                     <button class="burger">
                         <span class="burger__el"></span>
@@ -233,30 +233,14 @@
                     <button
                         class="control control_next offers__control offers__control-next control_type_disc">вперед</button>
                     <!-- Буллеты для слайдера -->
-                    <div class="slider-pagination offers-slider__pagination">
-                        <!-- Список буллетов -->
-                        <ul class="slider-pagination__bullets offers-slider__pagination-bullets">
-                            <!-- Буллет -->
-                            <li class="slider-pagination__bullet offers-slider__pagination-bullet">
-                                <a href="" class="slider-pagination__link offers-slider__pagination-link"></a>
-                            </li>
-                            <li class="slider-pagination__bullet offers-slider__pagination-bullet">
-                                <a href="" class="slider-pagination__link offers-slider__pagination-link"></a>
-                            </li>
-                            <li class="slider-pagination__bullet offers-slider__pagination-bullet active">
-                                <a href="" class="slider-pagination__link offers-slider__pagination-link"></a>
-                            </li>
-                            <li class="slider-pagination__bullet offers-slider__pagination-bullet">
-                                <a href="" class="slider-pagination__link offers-slider__pagination-link"></a>
-                            </li>
-                            <li class="slider-pagination__bullet offers-slider__pagination-bullet">
-                                <a href="" class="slider-pagination__link offers-slider__pagination-link"></a>
-                            </li>
-                            <li class="slider-pagination__bullet offers-slider__pagination-bullet">
-                                <a href="" class="slider-pagination__link offers-slider__pagination-link"></a>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul class="slider-indicators offers__slider-indicators">
+                        <li class="slider-indicator"></li>
+                        <li class="slider-indicator"></li>
+                        <li class="slider-indicator active"></li>
+                        <li class="slider-indicator"></li>
+                        <li class="slider-indicator"></li>
+                        <li class="slider-indicator"></li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -374,61 +358,46 @@
                     <div class="container gallery__slider-controls-container">
                         <!-- Копка назад -->
                         <button
-                            class="control control_type_disc control_prev gallery__slider-control-prev">Назад</button>
+                            class="control control_type_disc control_prev gallery__slider-control gallery__slider-control-prev">Назад</button>
                         <!-- Кнопка вперед -->
                         <button
-                            class="control control_type_disc control_next gallery__slider-control-next">Вперед</button>
+                            class="control control_type_disc gallery__slider-control control_next gallery__slider-control-next">Вперед</button>
                     </div>
                 </div>
                 <!-- Список фото -->
                 <ul class="gallery__list">
                     <li class="gallery__item">
-                        <img src="./img/gallery/photo1.jpg" alt="" class="gallery__img">
+                        <img src="./img/gallery/photo1.jpg" alt="фото кабинета" class="gallery__img" width="575"
+                            height="382">
                     </li>
                     <li class="gallery__item">
-                        <img src="./img/gallery/photo2.png" alt="" class="gallery__img">
+                        <img src="./img/gallery/photo2.jpg" alt="фото кабинета" class="gallery__img" width="575"
+                            height="382">
                     </li>
                     <li class="gallery__item">
-                        <img src="./img/gallery/photo1.jpg" alt="" class="gallery__img">
+                        <img src="./img/gallery/photo1.jpg" alt="фото кабинета" class="gallery__img" width="575"
+                            height="382">
                     </li>
                     <li class="gallery__item">
-                        <img src="./img/gallery/photo1.jpg" alt="" class="gallery__img">
+                        <img src="./img/gallery/photo1.jpg" alt="фото кабинета" class="gallery__img" width="575"
+                            height="382">
                     </li>
                 </ul>
             </div>
             <!-- Буллеты -->
             <div class="container">
-                <div class="gallery__pagination">
-                    <div class="slider-pagination offers-slider__pagination">
-                        <ul class="slider-pagination__bullets gallery-slider__pagination-bullets">
-                            <li class="slider-pagination__bullet gallery-slider__pagination-bullet">
-                                <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
-                            </li>
-                            <li class="slider-pagination__bullet gallery-slider__pagination-bullet">
-                                <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
-                            </li>
-                            <li class="slider-pagination__bullet gallery-slider__pagination-bullet active">
-                                <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
-                            </li>
-                            <li class="slider-pagination__bullet gallery-slider__pagination-bullet">
-                                <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
-                            </li>
-                            <li class="slider-pagination__bullet gallery-slider__pagination-bullet">
-                                <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
-                            </li>
-                            <li class="slider-pagination__bullet gallery-slider__pagination-bullet">
-                                <a href="" class="slider-pagination__link gallery-slider__pagination-link"></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <ul class="slider-indicators gallery__slider-indicators">
+                    <li class="slider-indicator"></li>
+                    <li class="slider-indicator"></li>
+                    <li class="slider-indicator active"></li>
+                    <li class="slider-indicator"></li>
+                    <li class="slider-indicator"></li>
+                    <li class="slider-indicator"></li>
+                </ul>
             </div>
         </section>
-
         <!-------- Контакты -------->
         <section class="contacts section">
-            <div class="contact__decor">
-            </div>
             <div class="container contacts__container">
                 <div class="contacts__content">
                     <h2 class="section-title contacts__title">Контакты</h2>

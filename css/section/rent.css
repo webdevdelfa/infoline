@@ -32,8 +32,6 @@
     column-gap: 10px;
 }
 
-
-
 /********************** Блок с селектом (появляется на мобильной версии) **********************************/
 
 .rent__select-wrap {
@@ -91,72 +89,7 @@
 
 /* Слайдер блока offers */
 .offers-slider__container {
-    /* padding: 0 30px; */
     position: relative;
-}
-
-/* ------ Стрелки слайдера ----------- */
-
-/* Блок под стрелки */
-.control {
-    font-size: 0px;
-    position: absolute;
-    z-index: 100;
-}
-
-/* Стрелку рисуем через псевдоэлемент */
-.control::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #7A7A7A;
-    border-top: none;
-    border-right: none;
-
-    /* Плавность изменения состояния */
-    transition: all 0.3s;
-}
-
-/* Стили при наведении на стрелку */
-.control:hover::before {
-    border-color: #1E92E7;
-}
-
-/* Стрелка назад */
-.control_prev {
-    transform: rotate(45deg);
-}
-
-/* Стрелка вперед */
-.control_next {
-    transform: rotate(-135deg);
-}
-
-
-/* Стрелка уголком */
-.control_type_triangle::before {
-    top: 0;
-    left: 0;
-}
-
-/* Модифицируем стрелку в круглую */
-.control_type_disc {
-    background: #FFFFFF;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Изменяем размер стрелки если она находится в круге */
-.control_type_disc::before {
-    width: 25%;
-    height: 25%;
-    border-color: #1E92E7;
 }
 
 /* --- Стили кнопки для блока offers (начало) --- */
@@ -164,10 +97,10 @@
 .offers__control {
     width: 20px;
     height: 20px;
-    top: 207px;
+    top: 217px;
 }
 
-.offers__control.control_type_disc {
+.control_type_triangle+.control_type_disc {
     display: none;
 }
 
@@ -234,7 +167,7 @@
 
 /* Блок с информацией (под картинкой) */
 .offer__info {
-    padding: 33px 40px 40px 40px;
+    padding: 33px 40px 40px;
 }
 
 /* Блок со списком (Площадь - 42, этаж - 7, интернет - есть) */
@@ -290,47 +223,4 @@
 /* Кнопку растягиваем на ширину родителя */
 .offer__btn {
     width: 100%;
-}
-
-
-
-/********************************************************* БУЛЛЕТЫ ДЛЯ СЛАЙДЕРА *************************************************/
-
-/* Блок с буллетами растягиваем на ширину родителя */
-.offers-slider__pagination {
-    width: 100%;
-}
-
-/* Список буллетов */
-.slider-pagination__bullets {
-    display: flex;
-    column-gap: 10px;
-    justify-content: center;
-}
-
-/* Буллет */
-.slider-pagination__bullet {
-
-    /* Запрещаем буллету расширяться (flex-grow: 0), разрешаем ужиматься (flex-shrink: 1), устанавливаем базовый размер (flex-basis: 73px) */
-    flex: 0 1 73px;
-    /* Высота буллета */
-    height: 3px;
-    /* Скругляем углы */
-    border-radius: 1px;
-    /* Если не установить данное свойство то углы не скруглятся */
-    overflow: hidden;
-}
-
-/* Ссылку делаем блочной и растягиваем на ширину и высоту родителя */
-.slider-pagination__link {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: #D9D9D9;
-}
-
-/* При клике на буллет к нему добавляется активный класс и ссылку внутри меняет цвет */
-.slider-pagination__bullet.active .slider-pagination__link {
-    background: #1E92E7;
-    border-radius: 1px;
 }
